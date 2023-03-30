@@ -29,6 +29,8 @@ const students = [
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
+  <div class="mx-5 px-5 pt-3">
+  <h1 class="text-center fw-bold">List Student</h1>
   <table id="studentTable" class="table table-light table-striped table-bordered">
     <thead>
     <tr class="table-dark text-light">
@@ -47,5 +49,6 @@ root.render(
     ))}
     </tbody>
   </table>
+  </div>
 );
 
