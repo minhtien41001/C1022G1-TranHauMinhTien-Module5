@@ -1,0 +1,44 @@
+body {
+    background-image: url("https://cdn.wallpapersafari.com/97/50/eRwDMy.jpg");
+}
+form {
+    background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v960-ning-30.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=63dd5f402645ef52fb7dfb592aec765a");
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+input:invalid {
+    border-color: red;
+}
+input:valid {
+    border-color: green;
+}
+.header {
+    background-image: url("https://img.wallpapersafari.com/desktop/1600/900/22/47/iU4Gez.jpg");
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.footer {
+
+    background-image: url("https://wallpaperaccess.com/full/3953563.jpg");
+}
+.left {
+    overflow: hidden;
+    height: 520px;
+}
+.left:hover {
+    overflow: scroll;
+}
+.zoom:hover {
+    transform: scale(1.2);
+}
+.body {
+    background-image: url("https://media.istockphoto.com/photos/abstract-blur-blue-gradient-color-background-with-bokeh-round-light-picture-id1310553941?b=1&k=20&m=1310553941&s=170667a&w=0&h=ceXJ-ZDLHlygjY53FQTNp5xpQ9lqRCkjD-RMJGUSvp0=");
+}
