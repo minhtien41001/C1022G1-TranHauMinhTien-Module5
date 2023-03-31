@@ -40,8 +40,8 @@ root.render(
     </tr>
     </thead>
     <tbody>
-    {students.map(student => (
-    <tr>
+    {students.map((student,index) => (
+    <tr key = {index}>
       <td>{student.name}</td>
       <td>{student.age}</td>
       <td>{student.adress}</td>
