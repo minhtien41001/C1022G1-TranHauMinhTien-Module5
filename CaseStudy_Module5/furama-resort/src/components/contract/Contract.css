@@ -1,0 +1,11 @@
+table {
+    border: solid 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,8 +1,7 @@
-import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import './FormFacility.css';
+import './FormCustomer.css';
 
-function FacilityCreate() {
+function CustomerEdit() {
     return (
         <>
             <div
@@ -89,7 +88,7 @@ function FacilityCreate() {
                 </div>
             </nav>
             <div className="mx-5 px-5 pt-3">
-                <h2 className="text-center fw-bold">Add new Facility</h2>
+                <h2 className="text-center fw-bold">Edit Facility</h2>
                 <p className="text-center mt-3">
                     <a href="/">
                         <i className="fa-solid fa-house-chimney h5 mx-1" /> Back to HOME
@@ -97,29 +96,12 @@ function FacilityCreate() {
                 </p>
                 <p className="text-center">
                     <a href="/facility/list">
-                        <i className="fa-solid fa-backward" /> Back to Facility list
+                        <i className="fa-solid fa-backward" /> Back to Customer list
                     </a>
                 </p>
                 <div className="d-flex justify-content-center">
                     <form className="w-50 border border-2 border-success p-3 rounded">
-                        <div className="mt-3 form-group">
-                            <label className="h6" htmlFor="facilityType">
-                                Facility Type:
-                            </label>
-                            <p style={{ color: "red" }} />
-                            <div className="input-group">
-                                <select
-                                    id="facilityType"
-                                    className="form-control"
-                                    name="facilityType"
-                                >
-                                    <option></option>
-                                </select>
-                                <span className="input-group-text">
-                                    <i className="fa-solid fa-ranking-star" />
-                                </span>
-                            </div>
-                        </div>
+                        <input type="hidden" />
                         <div className="form-group">
                             <label htmlFor="name" className="h6">
                                 Name:
@@ -212,7 +194,13 @@ function FacilityCreate() {
                             </label>
                             <p style={{ color: "red" }} />
                             <div className="input-group">
-                                <input type="text" id="poolArea" className="form-control" />
+                                <input
+                                    type="text"
+                                    id="poolArea"
+                                    className="form-control"
+                                    placeholder="Input pool Area"
+                                    name="poolArea"
+                                />
                                 <span className="input-group-text">
                                     <i className="fa-solid fa-map-location-dot" />
                                 </span>
@@ -255,6 +243,24 @@ function FacilityCreate() {
                             </div>
                         </div>
                         <div className="mt-3 form-group">
+                            <label className="h6" htmlFor="facilityType">
+                                Facility Type:
+                            </label>
+                            <p style={{ color: "red" }} />
+                            <div className="input-group">
+                                <select
+                                    id="facilityType"
+                                    className="form-control"
+                                    name="facilityType"
+                                >
+                                    <option />
+                                </select>
+                                <span className="input-group-text">
+                                    <i className="fa-solid fa-ranking-star" />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="mt-3 form-group">
                             <label className="h6" htmlFor="rentType">
                                 Rent Type:
                             </label>
@@ -282,6 +288,6 @@ function FacilityCreate() {
         </>
 
     )
-}
+};
 
-export default FacilityCreate;
+export default CustomerEdit

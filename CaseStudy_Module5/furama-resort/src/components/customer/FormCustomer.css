@@ -1,0 +1,12 @@
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+input:invalid {
+    border-color: red;
+}
+input:valid {
+    border-color: green;
+}
