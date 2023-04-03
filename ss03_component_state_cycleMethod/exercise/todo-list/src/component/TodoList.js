@@ -34,7 +34,7 @@ class TodoList extends Component {
     render() {
         return (
             <>
-                <h2 >CONTRACT LIST</h2>
+                <h2 >TODO LIST</h2>
                 <div>
                     <input value={this.state.todo}
                         onChange={(even) => this.handleInput(even.target.value)} />
