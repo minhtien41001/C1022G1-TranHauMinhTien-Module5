@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import './Facility.css';
+import facilityData from './model/Facility';
 
 function FacilityList() {
     return (
@@ -72,22 +73,29 @@ function FacilityList() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                    </tr>
+                    {
+                        facilityData.facility.map((facilityLists, index) => (
+
+                            <tr key={index}>
+                                <td  >{index + 1}</td>
+                                <td>{facilityLists.name}</td>
+                                <td>{facilityLists.area}</td>
+                                <td>{facilityLists.cost}</td>
+                                <td>{facilityLists.maxPeople}</td>
+                                <td>{facilityLists.standardRoom}</td>
+                                <td>{facilityLists.descriptionOtherCovenience}</td>
+                                <td>{facilityLists.poolArea}</td>
+                                <td>{facilityLists.numberOfFloors}</td>
+                                <td>{facilityLists.facilityFree}</td>
+                                <td>{facilityLists.rentType.name}</td>
+                                <td>{facilityLists.facilityType.name}</td>
+                                <td><button style={{ backgroundColor: "greenyellow" }}>Edit</button></td>
+                                <td><button style={{ backgroundColor: "greenyellow" }}>Delete</button></td>
+                            </tr>
+
+
+                        ))
+                    }
                 </tbody>
             </table>
         </div>
