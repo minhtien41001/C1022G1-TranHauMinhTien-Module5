@@ -7,16 +7,16 @@ const facility = [
         maxPeople: 10,
         facilityType: {
             id: 1,
-            name: 'Diamond'
+            name: 'Gold'
         },
         rentType:  {
             id: 1,
             name: 'abc'
         },
-        standardRoom: 'Vip',
+        standardRoom: 'Nomarl',
         descriptionOtherCovenience: 'abc',
-        poolArea: 5,
-        numberOfFloors: 5,
+        poolArea: 10,
+        numberOfFloors: 10,
         facilityFree: "abc",
         status: false
 

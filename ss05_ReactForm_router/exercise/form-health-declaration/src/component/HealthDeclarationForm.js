@@ -173,7 +173,7 @@ function HealthDeclarationForm() {
 
                         <div className="mb-3">
                             <label htmlFor="exampleInputAddressNumber" className="form-label">
-                                Quốc tịch:
+                                Số nhà:
                             </label>
                             <Field
                                 type="text"

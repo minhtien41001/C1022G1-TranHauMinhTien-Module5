@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import './Customer.css';
+import customerData from './model/Customer';
 
 function CustomerList() {
     return (
@@ -107,6 +108,38 @@ function CustomerList() {
                         <th className="text-center">Delete</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {customerData.customer.map((customers, index) => (
+                        <tr key={index}>
+                            <td>{customers.id}</td>
+                            <td>{customers.name}</td>
+                            <td>{customers.dateOfBirth}</td>
+                            <td>{customers.gender}</td>
+                            <td>{customers.idCard}</td>
+                            <td>{customers.phoneNumber}</td>
+                            <td>{customers.email}</td>
+                            <td>{customers.address}</td>                            
+                            <td>{customers.customerType.name}</td>
+                            <td className="text-center">
+                                <a >
+                                    <button className="btn btn-primary btn-outline-secondary btn-sm">
+                                        <span className="fa-solid fa-house-circle-exclamation text-light h6 m-auto px-2">Edit</span>
+                                    </button>
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a data-bs-toggle="modal"
+                                    data-bs-target="#deleteFacility" >
+                                    <button className="btn btn-danger btn-outline-secondary btn-sm">
+                                        <span className="fa-solid fa-person-circle-minus text-light h6 m-auto px-2">Delete</span>
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                    ))
+
+                    }
+                </tbody>
             </table>
             <div className="container-fluid text-center footer" style={{ height: 50 }}>
                 <p className="text-light pt-2">©FURAMA - officially operated in 1997.</p>

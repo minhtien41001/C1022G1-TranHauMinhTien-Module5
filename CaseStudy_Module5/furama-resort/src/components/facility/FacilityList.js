@@ -25,7 +25,7 @@ function FacilityList() {
                             className="form-control me-2"
                             type="text"
                             placeholder="Input search name"
-                            value="${nameSearch}"
+                            // value="${nameSearch}"
                             aria-label="Search"
                             name="nameSearch"
                             style={{ width: "210%" }}
@@ -34,7 +34,7 @@ function FacilityList() {
                             className="form-control me-2"
                             type="text"
                             placeholder="Input search FacilityType"
-                            value="${facilityType}"
+                            // value="${facilityType}"
                             aria-label="Search"
                             name="facilityTypeSearch"
                             style={{ width: "210%" }}

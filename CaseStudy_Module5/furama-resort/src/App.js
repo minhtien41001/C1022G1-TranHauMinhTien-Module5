@@ -3,10 +3,11 @@ import './App.css';
 import CustomerList from './components/customer/CustomerList';
 import CustomerCreate from './components/customer/CustomerCreate';
 import FacilityList from './components/facility/FacilityList';
+import FacilityCreate from './components/facility/FacilityCreate';
 
 function App() {
   return (
-    <FacilityList />
+    <CustomerList />
   );
 }
 
