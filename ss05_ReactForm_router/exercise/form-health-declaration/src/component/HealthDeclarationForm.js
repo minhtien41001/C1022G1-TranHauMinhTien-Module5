@@ -199,7 +199,7 @@ function HealthDeclarationForm() {
 
                         <div className="mb-3">
                             <label htmlFor="exampleInputEmail" className="form-label">
-                                Quốc tịch:
+                                Email:
                             </label>
                             <Field
                                 type="text"
@@ -223,23 +223,18 @@ function HealthDeclarationForm() {
                                 /vùng lãnh thổ nào(Có thể đi qua nhiều quốc gia)</label>
                                 <br></br>
                             <label htmlFor='medicalSign1' className="form-label" >Sốt</label>
-
                             <Field type='checkbox' placeholder='' name='medicalSign' className='form-check-input' id='medicalSign1' value='Sot' />
 
                             <label style={{ marginLeft: '10%' }} htmlFor='medicalSign2' className="form-label" >Ho</label>
-
                             <Field type='checkbox' placeholder='' name='medicalSign' className='form-check-input' id='medicalSign2' value='Ho' />
 
                             <label style={{ marginLeft: '10%' }} htmlFor='medicalSign3' className="form-label" >Khó thở</label>
-
                             <Field type='checkbox' placeholder='' name='medicalSign' className='form-check-input' id='medicalSign3' value='KhoTho' />
 
                             <label style={{ marginLeft: '10%' }} htmlFor='medicalSign4' className="form-label" >Mệt mỏi</label>
-
                             <Field type='checkbox' placeholder='' name='medicalSign' className='form-check-input' id='medicalSign4' value='MetMoi' />
 
                             <label style={{ marginLeft: '10%' }} htmlFor='medicalSign2' className="form-label" >Đau họng</label>
-
                             <Field type='checkbox' placeholder='' name='medicalSign' className='form-check-input' id='medicalSign2' value='DauHong' />
                         </div>
 
