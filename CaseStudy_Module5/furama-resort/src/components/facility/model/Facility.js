@@ -1,23 +1,23 @@
 const facility = [
     {
-        id : 5,
-        name: 'Xe đạp',
-        area: 1000,
+        id : 1,
+        name: 'Đạt Villa',
+        area: 2000,
         cost: 5,
-        maxPeople: 5,
+        maxPeople: 10,
         facilityType: {
             id: 1,
             name: 'Diamond'
         },
         rentType:  {
             id: 1,
-            name: '?'
+            name: 'abc'
         },
         standardRoom: 'Vip',
-        descriptionOtherCovenience: 'ổn',
+        descriptionOtherCovenience: 'abc',
         poolArea: 5,
         numberOfFloors: 5,
-        facilityFree: "đèn mờ",
+        facilityFree: "abc",
         status: false
 
 
@@ -46,11 +46,11 @@ const facility = [
 const rentType = [
     {
         id: 1,
-        name: '?'
+        name: 'abc'
     },
     {
-        id: 1,
-        name: '??'
+        id: 2,
+        name: 'cba'
     }
 
 ]

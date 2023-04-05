@@ -25,7 +25,7 @@ function FacilityList() {
                             className="form-control me-2"
                             type="text"
                             placeholder="Input search name"
-                            th:value="${nameSearch}"
+                            value="${nameSearch}"
                             aria-label="Search"
                             name="nameSearch"
                             style={{ width: "210%" }}
@@ -34,7 +34,7 @@ function FacilityList() {
                             className="form-control me-2"
                             type="text"
                             placeholder="Input search FacilityType"
-                            th:value="${facilityType}"
+                            value="${facilityType}"
                             aria-label="Search"
                             name="facilityTypeSearch"
                             style={{ width: "210%" }}
@@ -89,8 +89,21 @@ function FacilityList() {
                                 <td>{facilityLists.facilityFree}</td>
                                 <td>{facilityLists.rentType.name}</td>
                                 <td>{facilityLists.facilityType.name}</td>
-                                <td><button style={{ backgroundColor: "greenyellow" }}>Edit</button></td>
-                                <td><button style={{ backgroundColor: "greenyellow" }}>Delete</button></td>
+                                <td class="text-center">
+                                    <a >
+                                        <button class="btn btn-primary btn-outline-secondary btn-sm">
+                                            <span class="fa-solid fa-house-circle-exclamation text-light h6 m-auto px-2">Edit</span>
+                                        </button>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a data-bs-toggle="modal"
+                                        data-bs-target="#deleteFacility" >
+                                        <button class="btn btn-danger btn-outline-secondary btn-sm">
+                                            <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2">Delete</span>
+                                        </button>
+                                    </a>
+                                </td>
                             </tr>
 
 
