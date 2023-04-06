@@ -1,11 +1,12 @@
-import { Field, Formik } from "formik";
-import { Form } from "react-router-dom";
+import { Field, Formik, Form } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import * as BookService from '../service/BookService';
 import "bootstrap/dist/css/bootstrap.css";
 import { LineWave } from 'react-loader-spinner';
+import { useNavigate } from "react-router-dom";
 
 function CreateBook() {
+    let navigate = useNavigate();
     return (
         <>
             <Formik
@@ -17,6 +18,7 @@ function CreateBook() {
                             await BookService.save(values)
                             setSubmitting(false)
                             toast("thêm mới thành công")
+                            navigate("/book/list")
                         }
                         createBook()
                     }, 2000)
