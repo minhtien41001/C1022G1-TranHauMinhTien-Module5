@@ -118,7 +118,7 @@ function CustomerList() {
                             <td>{customers.idCard}</td>
                             <td>{customers.phoneNumber}</td>
                             <td>{customers.email}</td>
-                            <td>{customers.address}</td>                            
+                            <td>{customers.address}</td>
                             <td>{customers.customerType.name}</td>
                             <td className="text-center">
                                 <a >

@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import './Contract.css';
+import contractData from './model/Contract';
 
 function ContractList() {
     return (
@@ -39,14 +40,15 @@ function ContractList() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
-                        <td />
+                    {contractData.contract.map((contracts, index) => (
+                        <tr key={index}>
+                            <td>{contracts.id}</td>
+                            <td>{contracts.facility.name}</td>
+                            <td>{contracts.customer.name}</td>
+                            <td>{contracts.dateStart}</td>
+                            <td>{contracts.dateEnd}</td>
+                            <td>{contracts.deposit}</td>
+                            <td>{contracts.totalMoney}</td>
                         <td className="text-center">
                             <button
                                 className="btn btn-primary btn-outline-secondary btn-sm"
@@ -64,6 +66,8 @@ function ContractList() {
                             </button>
                         </td>
                     </tr>
+                    ))
+                    }
                 </tbody>
             </table>
         </div>
