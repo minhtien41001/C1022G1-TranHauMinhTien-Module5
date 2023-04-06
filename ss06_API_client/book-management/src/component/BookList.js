@@ -1,12 +1,12 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import * as BookService from '../service/BookService';
 import "bootstrap/dist/css/bootstrap.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function BookList() {
 
     const [book, setBook] = useState([])
 
-    
+
     useEffect(() => {
         const bookList = async () => {
             const data = await BookService.findAll()
@@ -14,13 +14,21 @@ function BookList() {
         }
         bookList()
     }, [])
+
+    const deleteBook = async (id) => {
+        await BookService.deleteBook(id);
+        const data = await BookService.findAll()
+        alert("xoa thanh cong")
+        setBook(data)
+    };
     return (
         <>
-                <button className="btn btn-success btn-outline-secondary btn-sm">
-                    <span className="fa-solid fa-house-medical text-light h5 my-auto me-1" />
-                    <span className="text-light"><NavLink to="book/create">Add new Book</NavLink> </span>
-                </button>
-            
+        <h1 className="center"></h1>
+            <button className="btn btn-success btn-outline-secondary btn-sm">
+                <span className="fa-solid fa-house-medical text-light h5 my-auto me-1" />
+                <span className="text-light"><NavLink to="book/create">Add new Book</NavLink> </span>
+            </button>
+
             <table
                 id="customerTable"
                 className="table table-light table-striped table-bordered"
@@ -39,16 +47,16 @@ function BookList() {
                             <td>{books.title}</td>
                             <td>{books.quantity}</td>
                             <td className="text-center">
-                                
-                                    <button className="btn btn-primary btn-outline-secondary btn-sm">
-                                        <span className="fa-solid fa-house-circle-exclamation text-light h6 m-auto px-2">Edit</span>
-                                    </button>
+
+                                <button className="btn btn-primary btn-outline-secondary btn-sm">
+                                    <span className="fa-solid fa-house-circle-exclamation text-light h6 m-auto px-2">Edit</span>
+                                </button>
                             </td>
                             <td class="text-center">
-                                
-                                    <button className="btn btn-danger btn-outline-secondary btn-sm">
-                                        <span className="fa-solid fa-person-circle-minus text-light h6 m-auto px-2">Delete</span>
-                                    </button>
+
+                                <button className="btn btn-danger btn-outline-secondary btn-sm" onClick={() => deleteBook(books.id)}>
+                                    <span className="fa-solid fa-person-circle-minus text-light h6 m-auto px-2">Delete</span>
+                                </button>
                             </td>
                         </tr>
                     ))

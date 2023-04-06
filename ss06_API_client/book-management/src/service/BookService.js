@@ -17,4 +17,15 @@ export const save = async (book) => {
     catch (err) {
         console.log(err);
     }
-};
+}
+
+export const deleteBook = async (id) => {
+    try{
+        await axios.delete("http://localhost:2001/books/" + id)
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+
