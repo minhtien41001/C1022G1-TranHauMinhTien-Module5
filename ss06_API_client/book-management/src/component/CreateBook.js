@@ -18,7 +18,7 @@ function CreateBook() {
                             await BookService.save(values)
                             setSubmitting(false)
                             toast("thêm mới thành công")
-                            navigate("/book/list")
+                            navigate("/")
                         }
                         createBook()
                     }, 2000)
