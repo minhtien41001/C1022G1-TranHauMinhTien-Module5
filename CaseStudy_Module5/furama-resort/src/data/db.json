@@ -1,0 +1,138 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "customerCode": "KH-1111",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Diệp Tấn em của Diệp Vấn",
+      "dateOfBirth": "1981-07-08",
+      "idCard": "543432111",
+      "phoneNumber": "0490039241",
+      "gender": "0",
+      "email": "nguyenngoctan@gmail.com",
+      "address": "Chuồng Chó"
+    },
+    {
+      "id": 2,
+      "customerCode": "KH-1111",
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "name": "Dương Quá",
+      "dateOfBirth": "1995-12-09",
+      "idCard": "795453345",
+      "phoneNumber": "0312345678",
+      "gender": "0",
+      "email": "duongqua123@gmail.com",
+      "address": "China"
+    },
+    {
+      "id": 6,
+      "name": null,
+      "dateOfBirth": null,
+      "gender": null,
+      "idCard": null,
+      "phoneNumber": null,
+      "email": null,
+      "address": null,
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Nguyễn Ngọc Tấn",
+      "dateOfBirth": "2023-03-23",
+      "gender": "0",
+      "idCard": "787899",
+      "phoneNumber": "0123321123",
+      "email": "ngoctanxx@gmail.com",
+      "address": "Chuồng bò",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "facility": [
+    {
+      "id": 2,
+      "name": "House Princess 01",
+      "area": 14000,
+      "cost": 5000000,
+      "maxPeople": 7,
+      "facilityType": {
+        "id": 2,
+        "name": "house"
+      },
+      "rentType": {
+        "id": 2,
+        "name": "month"
+      },
+      "standardRoom": "vip",
+      "description": "Có thêm bếp nướng",
+      "poolArea": 0,
+      "numberOfFloors": 3,
+      "facilityFree": ""
+    }
+  ],
+  "rent-type": [
+    {
+      "id": 1,
+      "name": "year"
+    },
+    {
+      "id": 2,
+      "name": "month"
+    },
+    {
+      "id": 3,
+      "name": "day"
+    },
+    {
+      "id": 4,
+      "name": "hour"
+    }
+  ],
+  "facility-type": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Room"
+    }
+  ]
+}

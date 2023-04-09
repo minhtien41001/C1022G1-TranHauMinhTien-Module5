@@ -1,9 +1,26 @@
 
 import "bootstrap/dist/css/bootstrap.css";
 import './FormCustomer.css';
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import * as Yup from "yup";
+
 function CustomerCreate() {
     return (
         <div className="mx-5 px-5 pt-3">
+            <Formik
+            initialValues={{id: "", name: "",customerCode: "", customerType: "",dateOfBirth: "", idCard: "", phoneNumber: "",gender: "", email: "", address: ""}}
+
+            validationSchema={Yup.object(
+                {
+                    name: Yup.string().required("Không được để trống!").matches(/^[A-Z][a-z]+(\s[A-Z][a-z]+)*$/, "Vui lòng nhập đúng tên"),
+                    phoneNumber: Yup.string().required("Không được để trống!").matches(/^(090|091|\(84\)\\+90|\\(84\\)\\+91)[\d]{7}$/,"Số điện thoại không chính xác!"),
+                    idCard: Yup.string().required("Không được để trống!").matches(/^([\d]{9}|[\d]{12})$/,"CMND không chính xác"),
+                    email: Yup.string().email("Email không đúng định dạng"),
+                    address: Yup.string().required("Không được để trống!")
+                }
+            )}
+            >
+
             <h2 className="text-center fw-bold">Add new Customer</h2>
             <p className="text-center mt-3">
                 <a href="/">
@@ -16,7 +33,7 @@ function CustomerCreate() {
                 </a>
             </p>
             <div className="d-flex justify-content-center">
-                <form
+                <Form
                     className="w-50 border border-2 border-success p-3 rounded"
                     action="/customer/save"
                     method="post"
@@ -27,7 +44,7 @@ function CustomerCreate() {
                         </label>
                         <p style={{ color: "red" }} />
                         <div className="input-group">
-                            <input
+                            <Field
                                 type="text"
                                 id="name"
                                 className="form-control"
@@ -38,13 +55,14 @@ function CustomerCreate() {
                                 <i className="fa-solid fa-person-circle-question" />
                             </span>
                         </div>
+                        <ErrorMessage name="name"/>
                     </div>
                     <div className="mt-3 form-group">
                         <label htmlFor="dateOfBirth" className="h6">
                             Date of Birth:
                         </label>
                         <p style={{ color: "red" }} />
-                        <input
+                        <Field
                             type="date"
                             id="dateOfBirth"
                             className="form-control"
@@ -55,7 +73,7 @@ function CustomerCreate() {
                         <label className="h6">Gender:</label>
                         <div className="d-flex">
                             <label className="d-block me-4">
-                                <input
+                                <Field
                                     type="radio"
                                     defaultValue={1}
                                     name="gender"
@@ -65,7 +83,7 @@ function CustomerCreate() {
                                 <i className="fa-solid fa-mars" />
                             </label>
                             <label className="d-block">
-                                <input type="radio" defaultValue={0} name="gender" /> Female
+                                <Field type="radio" defaultValue={0} name="gender" /> Female
                                 <i className="fa-solid fa-venus" />
                             </label>
                             <p style={{ color: "red" }} />
@@ -77,7 +95,7 @@ function CustomerCreate() {
                         </label>
                         <p style={{ color: "red" }} />
                         <div className="input-group">
-                            <input
+                            <Field
                                 type="text"
                                 id="idCard"
                                 className="form-control"
@@ -87,6 +105,7 @@ function CustomerCreate() {
                             <span className="input-group-text">
                                 <i className="fa-solid fa-id-card" />
                             </span>
+                            <ErrorMessage name="idCard"/>
                         </div>
                     </div>
                     <div className="mt-3 form-group">
@@ -95,16 +114,17 @@ function CustomerCreate() {
                         </label>
                         <p style={{ color: "red" }} />
                         <div className="input-group">
-                            <input
+                            <Field
                                 type="text"
                                 id="phone"
                                 className="form-control"
                                 placeholder="Input Phone number"
-                                name="phone"
+                                name="phoneNumber"
                             />
                             <span className="input-group-text">
                                 <i className="fa-solid fa-square-phone" />
                             </span>
+                            <ErrorMessage name="phoneNumber"/>
                         </div>
                     </div>
                     <div className="mt-3 form-group">
@@ -113,7 +133,7 @@ function CustomerCreate() {
                         </label>
                         <p style={{ color: "red" }} />
                         <div className="input-group">
-                            <input
+                            <Field
                                 type="text"
                                 id="email"
                                 className="form-control"
@@ -123,6 +143,7 @@ function CustomerCreate() {
                             <span className="input-group-text">
                                 <i className="fa-solid fa-envelope-circle-check" />
                             </span>
+                            <ErrorMessage name="email"/>
                         </div>
                     </div>
                     <div className="mt-3 form-group">
@@ -131,7 +152,7 @@ function CustomerCreate() {
                         </label>
                         <p style={{ color: "red" }} />
                         <div className="input-group">
-                            <input
+                            <Field
                                 type="text"
                                 id="address"
                                 className="form-control"
@@ -142,6 +163,7 @@ function CustomerCreate() {
                                 <i className="fa-solid fa-map-location-dot" />
                             </span>
                         </div>
+                        <ErrorMessage name="address"/>
                     </div>
                     <div className="mt-3 form-group">
                         <label className="h6" htmlFor="customerType">
@@ -166,8 +188,12 @@ function CustomerCreate() {
                             -- Save <i className="fa-solid fa-floppy-disk" /> --
                         </button>
                     </div>
-                </form>
+                </Form>
             </div>
+            </Formik>
+
+
+            
         </div>
 
     );

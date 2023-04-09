@@ -1,15 +1,14 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import CustomerList from './components/customer/CustomerList';
+// import CustomerList from './components/customer/CustomerList';
 import CustomerCreate from './components/customer/CustomerCreate';
-import FacilityList from './components/facility/FacilityList';
-import FacilityCreate from './components/facility/FacilityCreate';
-import ContractList from './components/contract/ContractList';
+// import FacilityList from './components/facility/FacilityList';
+// import FacilityCreate from './components/facility/FacilityCreate';
+// import ContractList from './components/contract/ContractList';
 
 function App() {
   return (
-    <ContractList />
+    <CustomerCreate />
   );
 }
-
 export default App;

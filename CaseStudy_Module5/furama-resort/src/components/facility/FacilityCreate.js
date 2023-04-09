@@ -1,10 +1,30 @@
 import { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import './FormFacility.css';
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import * as Yup from "yup";
 
 function FacilityCreate() {
     return (
         <>
+
+<Formik initialValues={{name: '',area: '',cost: '',maxPepple: '',facilityType: {},rentType: {},standardRoom: '',description: '',poolArea: '',numberOfFloors: '',facilityFree: '', status: ''}}
+
+      validationSchema={Yup.object({
+        name: Yup.string().required("Không được đẻ trống!"),
+        area: Yup.number().required("Không được đẻ trống!"),
+        cost: Yup.number().required("Không được đẻ trống!"),
+        maxPepple: Yup.number().required("Không được đẻ trống!"),
+        standardRoom: Yup.string().required("Không được đẻ trống!"),
+        description: Yup.string().required("Không được đẻ trống!"),
+        poolArea: Yup.number().required("Không được đẻ trống!"),
+        numberOfFloors: Yup.string().required("Không được đẻ trống!"),
+        facilityFree: Yup.string().required("Không được đẻ trống!")
+
+      })}
+
+
+      >
             <div
                 className="container-fluid bg-gray-500 d-flex header"
                 style={{ height: 100 }}
@@ -101,7 +121,7 @@ function FacilityCreate() {
                     </a>
                 </p>
                 <div className="d-flex justify-content-center">
-                    <form className="w-50 border border-2 border-success p-3 rounded">
+                    <Form className="w-50 border border-2 border-success p-3 rounded">
                         <div className="mt-3 form-group">
                             <label className="h6" htmlFor="facilityType">
                                 Facility Type:
@@ -126,7 +146,7 @@ function FacilityCreate() {
                             </label>
                             <p style={{ color: "red" }} />
                             <div className="input-group">
-                                <input
+                                <Field
                                     type="text"
                                     id="name"
                                     className="form-control"
@@ -137,20 +157,23 @@ function FacilityCreate() {
                                     <i className="fa-solid fa-person-circle-question" />
                                 </span>
                             </div>
+                            <ErrorMessage name="name"/>
                         </div>
                         <div className="mt-3 form-group">
                             <label htmlFor="area" className="h6">
                                 Area:
                             </label>
                             <p style={{ color: "red" }} />
-                            <input type="text" id="area" className="form-control" name="area" />
+                            <Field type="text" id="area" className="form-control" name="area" />
+                            <ErrorMessage name="area"/>
                         </div>
                         <div className="mt-3 form-group">
                             <label htmlFor="cost" className="h6">
                                 Cost:
                             </label>
                             <p style={{ color: "red" }} />
-                            <input type="text" id="cost" className="form-control" name="cost" />
+                            <Field type="text" id="cost" className="form-control" name="cost" />
+                            <ErrorMessage name="cost"/>
                         </div>
                         <div className="mt-3 form-group">
                             <label htmlFor="maxPeople" className="h6">
@@ -158,7 +181,7 @@ function FacilityCreate() {
                             </label>
                             <p style={{ color: "red" }} />
                             <div className="input-group">
-                                <input
+                                <Field
                                     type="text"
                                     id="maxPeople"
                                     className="form-control"
@@ -168,6 +191,7 @@ function FacilityCreate() {
                                 <span className="input-group-text">
                                     <i className="fa-solid fa-id-card" />
                                 </span>
+                                <ErrorMessage name="maxPeople"/>
                             </div>
                         </div>
                         <div className="mt-3 form-group">
@@ -176,7 +200,7 @@ function FacilityCreate() {
                             </label>
                             <p style={{ color: "red" }} />
                             <div className="input-group">
-                                <input
+                                <Field
                                     type="text"
                                     id="standardRoom"
                                     className="form-control"
@@ -186,6 +210,7 @@ function FacilityCreate() {
                                 <span className="input-group-text">
                                     <i className="fa-solid fa-square-phone" />
                                 </span>
+                                <ErrorMessage name="standardRoom"/>
                             </div>
                         </div>
                         <div className="mt-3 form-group">
@@ -194,16 +219,17 @@ function FacilityCreate() {
                             </label>
                             <p style={{ color: "red" }} />
                             <div className="input-group">
-                                <input
+                                <Field
                                     type="text"
-                                    id="descriptionOtherConvenience"
+                                    id="description"
                                     className="form-control"
                                     placeholder="Input Description"
-                                    name="descriptionOtherConvenience"
+                                    name="description"
                                 />
                                 <span className="input-group-text">
                                     <i className="fa-solid fa-envelope-circle-check" />
                                 </span>
+                                <ErrorMessage name="description"/>
                             </div>
                         </div>
                         <div className="mt-3 form-group">
@@ -212,11 +238,12 @@ function FacilityCreate() {
                             </label>
                             <p style={{ color: "red" }} />
                             <div className="input-group">
-                                <input type="text" id="poolArea" className="form-control" />
+                                <Field type="text" id="poolArea" className="form-control" />
                                 <span className="input-group-text">
                                     <i className="fa-solid fa-map-location-dot" />
                                 </span>
                             </div>
+                            <ErrorMessage name="poolArea"/>
                         </div>
                         <div className="mt-3 form-group">
                             <label htmlFor="numberOfFloors" className="h6">
@@ -224,7 +251,7 @@ function FacilityCreate() {
                             </label>
                             <p style={{ color: "red" }} />
                             <div className="input-group">
-                                <input
+                                <Field
                                     type="text"
                                     id="numberOfFloors"
                                     className="form-control"
@@ -234,6 +261,7 @@ function FacilityCreate() {
                                 <span className="input-group-text">
                                     <i className="fa-solid fa-map-location-dot" />
                                 </span>
+                                <ErrorMessage name="numberOfFloors"/>
                             </div>
                         </div>
                         <div className="mt-3 form-group">
@@ -242,7 +270,7 @@ function FacilityCreate() {
                             </label>
                             <p style={{ color: "red" }} />
                             <div className="input-group">
-                                <input
+                                <Field
                                     type="text"
                                     id="facilityFree"
                                     className="form-control"
@@ -273,12 +301,13 @@ function FacilityCreate() {
                                 -- Save <i className="fa-solid fa-floppy-disk" /> --
                             </button>
                         </div>
-                    </form>
+                    </Form>
                 </div>
             </div>
             <div className="container-fluid text-center footer" style={{ height: 50 }}>
                 <p className="text-light pt-2">©FURAMA - officially operated in 1997.</p>
             </div>
+            </Formik>
         </>
 
     )
