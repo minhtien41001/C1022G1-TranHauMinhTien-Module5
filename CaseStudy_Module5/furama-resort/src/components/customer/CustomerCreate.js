@@ -191,11 +191,7 @@ function CustomerCreate() {
                 </Form>
             </div>
             </Formik>
-
-
-            
         </div>
-
     );
 }
 

@@ -15,15 +15,23 @@ function BookList() {
         bookList()
     }, [])
 
+    const findAllBook = async () => {
+        const data = await BookService.findAll()
+        setBook(data)
+    }
+    
     const deleteBook = async (id) => {
         await BookService.deleteBook(id);
-        const data = await BookService.findAll()
+        findAllBook()
         alert("xoa thanh cong")
-        setBook(data)
+        
     };
+
+
+
     return (
         <>
-        <h1 className="center"></h1>
+            <h1></h1>
             <button className="btn btn-success btn-outline-secondary btn-sm">
                 <span className="fa-solid fa-house-medical text-light h5 my-auto me-1" />
                 <span className="text-light"><NavLink to="book/create">Add new Book</NavLink> </span>

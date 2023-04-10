@@ -28,4 +28,23 @@ export const deleteBook = async (id) => {
     }
 }
 
+export const findById = async (id) => {
+    try{
+        const book = await axios.get("http://localhost:2001/books/" + id)
+        return book.data
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+export const editBook = async(book) => {
+    try{
+        const editBook = await axios.put("http://localhost:2001/books/" + book.id)
+        return editBook.data
+    }
+    catch(err){
+        console.log(err);
+    }
+}
 

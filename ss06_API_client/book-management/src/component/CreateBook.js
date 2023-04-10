@@ -13,16 +13,13 @@ function CreateBook() {
                 initialValues={{ title: '', quantity: '' }}
 
                 onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                        const createBook = async () => {
-                            await BookService.save(values)
-                            setSubmitting(false)
-                            toast("thêm mới thành công")
-                            navigate("/")
-                        }
-                        createBook()
-                    }, 2000)
-
+                    const createBook = async () => {
+                        await BookService.save(values)
+                        setSubmitting(false)
+                        toast("thêm mới thành công")
+                        navigate("/")
+                    }
+                    createBook()
                 }}>
 
                 {({ isSubmitting }) => (
