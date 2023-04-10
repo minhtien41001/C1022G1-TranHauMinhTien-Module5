@@ -1,0 +1,60 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Thủy Hử",
+      "quantity": 10000,
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "title": "Hồng Lâu Mộng",
+      "quantity": 2000,
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "title": "Tây Du Ký",
+      "quantity": 40000,
+      "categoryId": 3
+    },
+    {
+      "id": 4,
+      "title": "Doremon",
+      "quantity": 200,
+      "categoryId": null
+    },
+    {
+      "id": 5,
+      "title": "abc",
+      "quantity": 123,
+      "categoryId": null
+    },
+    {
+      "id": 6,
+      "title": "aaaaaaaaaaaaaaa",
+      "quantity": 123,
+      "categoryId": 2
+    },
+    {
+      "id": 7,
+      "title": "bbbbbbbbbbb",
+      "quantity": 123,
+      "categoryId": 3
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "categoryName": "Hoạt hình"
+    },
+    {
+      "id": 2,
+      "categoryName": "Kiếm hiệp"
+    },
+    {
+      "id": 3,
+      "categoryName": "Ngôn tình"
+    }
+  ]
+}
