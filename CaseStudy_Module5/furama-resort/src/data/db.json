@@ -3,10 +3,7 @@
     {
       "id": 1,
       "customerCode": "KH-1111",
-      "customerType": {
-        "id": 1,
-        "name": "Diamond"
-      },
+      "customerTypeId": 1,
       "name": "Diệp Tấn em của Diệp Vấn",
       "dateOfBirth": "1981-07-08",
       "idCard": "543432111",
@@ -18,10 +15,7 @@
     {
       "id": 2,
       "customerCode": "KH-1111",
-      "customerType": {
-        "id": 4,
-        "name": "Silver"
-      },
+      "customerTypeId":4,
       "name": "Dương Quá",
       "dateOfBirth": "1995-12-09",
       "idCard": "795453345",
@@ -31,32 +25,15 @@
       "address": "China"
     },
     {
-      "id": 6,
-      "name": null,
-      "dateOfBirth": null,
-      "gender": null,
-      "idCard": null,
-      "phoneNumber": null,
-      "email": null,
-      "address": null,
-      "customerType": {
-        "id": 3,
-        "name": "Gold"
-      }
-    },
-    {
       "id": 16,
       "name": "Nguyễn Ngọc Tấn",
       "dateOfBirth": "2023-03-23",
       "gender": "0",
       "idCard": "787899",
       "phoneNumber": "0123321123",
-      "email": "ngoctanxx@gmail.com",
+      "email": "ngoctanxx@gmail.com", 
       "address": "Chuồng bò",
-      "customerType": {
-        "id": 2,
-        "name": "Platinum"
-      }
+      "customerTypeId": 2
     }
   ],
   "customerType": [
@@ -88,14 +65,8 @@
       "area": 14000,
       "cost": 5000000,
       "maxPeople": 7,
-      "facilityType": {
-        "id": 2,
-        "name": "house"
-      },
-      "rentType": {
-        "id": 2,
-        "name": "month"
-      },
+      "facilityTypeId": 2,
+      "rentTypeId": 2,
       "standardRoom": "vip",
       "description": "Có thêm bếp nướng",
       "poolArea": 0,

@@ -1,9 +1,27 @@
-import { Component } from "react";
+import { Component, useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import './Customer.css';
-import customerData from './model/Customer';
+import * as CustomerService from "../../service/CustomerService";
 
 function CustomerList() {
+    const [customer,setCustomer] = useState([]);
+    const [customerType,setCustomerType] = useState([]);
+
+    const findAllCustomer = async () => {
+        const res = await CustomerService.findAllCustomer()
+        setCustomer(res)
+    }
+
+    const findAllCustomerType = async () => {
+        const res = await CustomerService.findAllCustomerType()
+        setCustomerType(res)
+    }
+
+    useEffect(() =>{
+        findAllCustomer()
+        findAllCustomerType()
+    },[])
+    
     return (
         <>
             <div
@@ -109,7 +127,7 @@ function CustomerList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {customerData.customer.map((customers, index) => (
+                    {customer.map((customers, index) => (
                         <tr key={index}>
                             <td>{customers.id}</td>
                             <td>{customers.name}</td>
@@ -119,7 +137,7 @@ function CustomerList() {
                             <td>{customers.phoneNumber}</td>
                             <td>{customers.email}</td>
                             <td>{customers.address}</td>
-                            <td>{customers.customerType.name}</td>
+                            <td>{customerType.filter((customerTypeList) => customerTypeList.id == customers.customerTypeId)[0]?.name}</td>
                             <td className="text-center">
                                 <a >
                                     <button className="btn btn-primary btn-outline-secondary btn-sm">

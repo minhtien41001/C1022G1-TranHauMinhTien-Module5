@@ -1,0 +1,43 @@
+{
+  "books": [
+    {
+      "name": "Pham Quang Vinh",
+      "categoryId": 1,
+      "date": "04/10/2001",
+      "amount": "1000",
+      "id": 4
+    },
+    {
+      "name": "Pham Quang Vinh",
+      "categoryId": "3",
+      "date": "04/10/2001",
+      "amount": "12",
+      "id": 5
+    },
+    {
+      "name": "Nguyen Ngoc Tan",
+      "categoryId": "2",
+      "date": "04/10/2001",
+      "amount": "100",
+      "id": 6
+    }
+  ],
+  "categorys": [
+    {
+      "id": 1,
+      "categoryName": "AAA"
+    },
+    {
+      "id": 2,
+      "categoryName": "BBB"
+    },
+    {
+      "id": 3,
+      "categoryName": "CCC"
+    },
+    {
+      "id": 4,
+      "categoryName": "DDDD"
+    }
+  ]
+}

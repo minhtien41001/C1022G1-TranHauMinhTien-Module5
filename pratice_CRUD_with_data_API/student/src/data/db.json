@@ -1,0 +1,39 @@
+{
+  "students": [
+    {
+      "name": "Nguyen Ngoc Tan",
+      "gender": "Nam",
+      "age": "21",
+      "classId": 1,
+      "id": 3
+    },
+    {
+      "name": "Nguyen Ngoc Tan",
+      "gender": "Nu",
+      "age": "22",
+      "classId": 1,
+      "id": 4
+    },
+    {
+      "name": "Pham Quang Vinh",
+      "gender": "Nu",
+      "age": "16",
+      "classId": 1,
+      "id": 5
+    }
+  ],
+  "classes": [
+    {
+      "id": 1,
+      "className": "C1022G1"
+    },
+    {
+      "id": 2,
+      "className": "C0922G1"
+    },
+    {
+      "id": 3,
+      "className": "C0822G1"
+    }
+  ]
+}

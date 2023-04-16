@@ -1,0 +1,32 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "json-serverrrrrrrrrrrrrrrrr",
+      "location": "typicode",
+      "clubId": 1
+    },
+    {
+      "id": 2,
+      "name": "json-server",
+      "location": "typicode",
+      "clubId": 2
+    },
+    {
+      "name": "Pham Quang Vinh",
+      "location": "afdasf",
+      "clubId": "2",
+      "id": 3
+    }
+  ],
+  "clubs": [
+    {
+      "id": 1,
+      "clubName": "some comment"
+    },
+    {
+      "id": 2,
+      "clubName": "some comment"
+    }
+  ]
+}

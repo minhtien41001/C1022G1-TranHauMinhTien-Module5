@@ -47,7 +47,7 @@ function BookList(){
                         <td>{book.id}</td>
                         <td>{book.title}</td>
                         <td>{book.quantity}</td>
-                        <td>{category.filter((categoryList) => categoryList.id == book.categoryId)[0]?.categoryName}</td>
+                        <td>{category.filter((categoryList) => categoryList.id === book.categoryId)[0]?.categoryName}</td>
                         <td><button><Link to={"books/edit/" + book.id}>Edit</Link></button></td>
                         <td><button onClick={() => deleteBook(book.id)}>Delete</button></td>
                     </tr>
