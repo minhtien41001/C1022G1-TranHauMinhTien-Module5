@@ -10,7 +10,7 @@ function ContactForm() {
     return (
         <>
             <Formik
-                initialValues={{ name: "", email: "",phone: "",message: "" }}
+                initialValues={{ name: "", email: "", phone: "", message: "" }}
                 validationSchema={Yup.object({
                     name: Yup.string()
                         .required("Không được để trống"),

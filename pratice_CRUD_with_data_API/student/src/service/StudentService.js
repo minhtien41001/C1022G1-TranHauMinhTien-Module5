@@ -43,7 +43,6 @@ export const findById = async (id) => {
 }
 
 export const edit = async (student) => {
-    console.log(student);
     try{
         await axios.put(API_STUDENT + `/${student.id}`, { ...student })
     }
